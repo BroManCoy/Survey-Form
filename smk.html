@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMK NU MA'ARIF</title>
+    <style>
+        body {
+            font-family:Arial, Helvetica, sans-serif;
+            background-color: #1b1b32;
+            width: 100%;
+            height: 100vh;
+            color: #f5f6f7;
+            font-size: 16px;
+        }
+
+        h1, p {
+            margin: 1em auto;
+            text-align: center;
+        }
+
+        form {
+            background-color: rgba(0, 20, 50, 0.4);
+            padding: 12px;
+            width: 60vw;
+            min-width: 300px;
+            max-width: 500px;
+            border-radius: 10px;
+            margin: 0 auto;
+            padding-bottom: 2em;
+        }
+
+        fieldset {
+            border: none;
+            padding: 2rem 0;
+            border-bottom: 3px solid #3b3b4f;
+        }
+
+        label {
+            display: block;
+            margin: 0.5rem 0;
+        }
+
+        input, textarea, select {
+            padding: 10px 0 0 0;
+            width: 100%;
+            min-height: 2em;
+        }
+
+        input, textarea {
+            background-color: #0a0a23;
+            border: 1px solid #0a0a23;
+            color: #ffffff;
+        }
+
+        .inline {
+            width: unset;
+            display: inline;
+            margin: 0 0.5em 0 0;
+            vertical-align: middle;
+        }
+
+        fieldset:last-of-type {
+            border: none;
+        }
+
+        a {
+            color: #ffffff;
+        }
+
+        a:visited {
+            color: grey;
+        }
+
+        input[type="submit"] {
+            width: 60%;
+            display: block;
+            margin: 1em auto;
+            height: 2em;
+            min-width: 300px;
+            background-color: #3b3b4f;
+        }
+
+        input[type="submit"]:hover {
+            border: 1px solid white;
+        }
+
+        .axl {
+            border-radius: 4px;
+        }
+
+        .axl:hover {
+            border: 1px solid #147e12;
+        }
+
+        input[type="checkbox"], input[type="radio"] {
+            accent-color: #30ce3a;
+        }
+    </style>
+</head>
+<body>
+    <h1>SMK NU MA'ARIF KUDUS</h1>
+    <p id="description"><em>Bantu kami meningkatkan kualitas sekolah</em></p>
+    <form id="survey">
+        <fieldset>
+            <label for="nama">Nama <input type="text" id="nama" required placeholder="Masukkan Nama" class="axl"/></label>
+            <label for="email">Email <input type="email" id="email" required placeholder="Masukkan Email" class="axl"/></label>
+            <label for="umur">Umur (opsional) <input type="number" min="13" max="100" class="axl"/></label>
+        </fieldset>
+        <fieldset>
+            <label for="jurusan">Jurusan
+                <select required id="jurusan">
+                    <option value="0">Pilih Jurusan</option>
+                    <option value="1">TSM</option>
+                    <option value="2">TKR</option>
+                    <option value="3">TOI</option>
+                    <option value="4">TITL</option>
+                    <option value="5">TPL</option>
+                    <option value="6">TKJ</option>
+                    <option value="7">TP</option>
+                </select>
+            </label>
+            <label>Kelas</label>
+            <label><input type="radio" checked name="kelas" value="1" class="inline"/>X</label>
+            <label><input type="radio" name="kelas" value="2" class="inline"/>XI</label>
+            <label><input type="radio" name="kelas" value="3" class="inline"/>XII</label>
+        </fieldset>
+        <fieldset>
+            <label for="likes">Hal Apa Yang Anda Sukai Dari Kami? 
+                <select id="likes" required>
+                    <option value="0">Pilih Satu</option>
+                    <option value="1">Fasilitas</option>
+                    <option value="2">Sistem Pembelajaran</option>
+                    <option value="3">Kebersihan</option>
+                    <option value="4">Lain-lain</option>
+                </select>
+            </label>
+            <div for="plus">
+                <label>Bagaimana Kualitas Lingkungan Kami?</label>
+                <label><input type="checkbox" class="inline" value="1"/>Bersih</label>
+                <label><input type="checkbox" class="inline" value="2"/>Ramah</label>
+                <label><input type="checkbox" class="inline" value="3"/>Rapi</label>
+            </div>
+            <label for="komen">Ada pendapat lain? <textarea id="komen" placeholder="Ketik sesuatu...." class="axl"></textarea></label>
+        </fieldset>
+        <label for="agreement"><input type="checkbox" required id="agreement" class="inline" value="1"/>Saya setuju atas <a href="https://www.facebook.com/Jokowi/?locale=id_ID">Kebijakan & Privasi</a></label>
+        <input type="submit" value="Kirim" id="kirim" />
+    </form>
+</body>
+</html>
